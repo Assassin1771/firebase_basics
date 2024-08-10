@@ -3,6 +3,7 @@ import { firebaseApp } from "./firebase";
 import { getDatabase, ref, set } from "firebase/database";
 import CreateUser from "./components/createUser";
 import Login from "./components/login";
+import GoogleAuth from "./components/GoogleAuth";
 
 const firebaseDb = getDatabase(firebaseApp);
 
@@ -29,6 +30,7 @@ const App = () => {
 
       <CreateUser />
       <Login />
+      <GoogleAuth />
     </div>
   );
 };
