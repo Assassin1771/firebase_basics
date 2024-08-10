@@ -1,17 +1,17 @@
 import React, { useState } from "react";
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 
-const CreateUser = () => {
+const Login = () => {
   const auth = getAuth();
 
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
 
   const createUser = () => {
-    createUserWithEmailAndPassword(auth, email, password)
+    signInWithEmailAndPassword(auth, email, password)
       .then((res) => {
         console.log(res);
-        window.alert("USER CREATED");
+        window.alert("USER LOGGED IN");
       })
       .catch((error) => {
         window.alert(error);
@@ -20,7 +20,7 @@ const CreateUser = () => {
 
   return (
     <div style={{ display: "flex", flexDirection: "column", gap: "24px" }}>
-      <h1>CREATE USER</h1>
+      <h1>LOGIN</h1>
       <span style={{ display: "flex", gap: "8px" }}>
         <label>GMAIL</label>
         <input
@@ -48,4 +48,4 @@ const CreateUser = () => {
   );
 };
 
-export default CreateUser;
+export default Login;

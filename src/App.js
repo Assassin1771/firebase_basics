@@ -2,6 +2,7 @@ import React from "react";
 import { firebaseApp } from "./firebase";
 import { getDatabase, ref, set } from "firebase/database";
 import CreateUser from "./components/createUser";
+import Login from "./components/login";
 
 const firebaseDb = getDatabase(firebaseApp);
 
@@ -27,6 +28,7 @@ const App = () => {
       <button onClick={() => setData(1)}>SET DATA IN REALTIME DB</button>
 
       <CreateUser />
+      <Login />
     </div>
   );
 };
