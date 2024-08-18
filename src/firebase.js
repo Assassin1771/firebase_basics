@@ -11,7 +11,7 @@ const firebaseConfig = {
   storageBucket: "first-project-c56e4.appspot.com",
   messagingSenderId: "246569265081",
   appId: "1:246569265081:web:a1ba66a173d10fd077f868",
-  databaseUrl: "https://first-project-c56e4-default-rtdb.firebaseio.com/",
+  databaseUrl: "https://first-project-c56e4-default-rtdb.firebaseio.com/", // realtime db url
 };
 
 // Initialize Firebase
